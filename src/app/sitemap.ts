@@ -5,7 +5,7 @@ import Product from '@/models/Product';
 import Category from '@/models/Category';
 import Subcategory from '@/models/Subcategory';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://uniview-uae.ae';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXTAUTH_URL || 'https://uniview-uae.ae';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
