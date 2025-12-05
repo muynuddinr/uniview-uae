@@ -178,8 +178,9 @@ const ProductGrid: React.FC<ProductGridProps> = ({ className = '' }) => {
                 src={imageUrl}
                 alt={title}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover opacity-75 group-hover:opacity-90 transition-opacity duration-500"
-                priority
+                priority={index < 3}
               />
             </div>
             
@@ -189,8 +190,9 @@ const ProductGrid: React.FC<ProductGridProps> = ({ className = '' }) => {
                 src={mobileImageUrl}
                 alt={title}
                 fill
+                sizes="100vw"
                 className="object-cover opacity-75 group-hover:opacity-90 transition-opacity duration-500"
-                priority
+                priority={index < 3}
               />
             </div>
           </motion.div>
